@@ -1,113 +1,115 @@
-import Image from 'next/image'
+"use client"
 
-export default function Home() {
+import Navbar from "./components/Navbar"
+import { BsSpotify } from "react-icons/bs";
+import { AiFillHtml5  } from "react-icons/ai";
+import { BiLogoCss3 , BiLogoJavascript  , BiLogoReact , BiLogoNodejs , BiLogoMongodb,BiLogoDocker,BiLogoKubernetes} from "react-icons/bi";
+import { SiExpress } from "react-icons/si";
+export default function Home({children}) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className='min-h-screen w-screen bg-[#F4F4F4]'>
+      <Navbar/>
+      {children ? <>{children}</> : 
+      <div className=" flex justify-center min-h-screen w-full">
+      <div className=" w-4/5 h-full grid-rows-4 p-10 grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 grid-flow-rows">
+
+
+{/* intro  */}
+          <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex flex-col col-span-2 rounded-[40px] row-span-1 p-6 ">
+            <h1 className=" pb-4 text-5xl text-center">Saikat Mandal</h1>
+            <p className=" p-4 text-xl"> Self-taught Web-end developer in Pune Hey! I'm Saikat, and my goal is to work at a company where I can deliver business value while levelling up my skills as a developer.</p>
+            <div>
+            <button className=' px-3 py-1 ml-1 border-4 hover:scale-105 border-orange-500 rounded-full'>Lean more</button>
+            </div>
+          </div>
+                  
+                  {/* images  */}
+          <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-1 rounded-[40px] p-6 row-span-1 ">
+           image
+          </div>       
+
+          {/* my stack     */}
+          <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-1 rounded-[40px] row-span-2 p-6">
+            <p className="pb-8 text-3xl font-bold">My stack</p>
+                  <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                      <div className="text-4xl">
+                      <AiFillHtml5 className=" text-orange-500" />
+                      <BiLogoCss3  className=" text-blue-500" />
+                    </div>
+                    <div>
+                      <p>Build Responsive Websites with HTML and CSS</p>
+                    </div>
+                  </div>                  
+                  <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                      <div className="text-4xl">
+                      <BiLogoJavascript className=" text-yellow-200" />
+                      
+                    </div>
+                    <div>
+                      <p>The Complete JavaScript Course</p>
+                    </div>
+                  </div>   
+                  
+                  <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                      <div className="text-4xl">
+                      <BiLogoReact className=" text-cyan-400" />
+                      
+                    </div>
+                    <div>
+                      <p>React: The Complete Guide</p>
+                    </div>
+                  </div>
+
+                  <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                      <div className="text-4xl">
+                      <BiLogoNodejs className=" text-green-400" />
+                      <SiExpress className="" />
+                      <BiLogoMongodb className=" text-green-700" />
+                      
+                    </div>
+                    <div>
+                      <p>Node.js, Express and MongoDB Bootcamp</p>
+                    </div>
+                  </div>  
+          </div>           
+
+          {/* current    */}
+          <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-1 rounded-[40px] row-span-2 p-6">
+          <p className="pb-8 text-3xl font-bold">Currently learning</p>
+                  <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                      <div className="text-4xl">
+                      <BiLogoDocker className=" text-cyan-500" />
+                      <BiLogoKubernetes  className=" text-blue-500" />
+                    </div>
+                    <div>
+                      <p>Devops</p>
+                    </div>
+                  </div>                  
+                  
+
+                  
+          </div>               
+              
+          <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-2 rounded-[40px] row-span-1 p-6">
+            map
+          </div>     
+         <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-center justify-between col-span-3 rounded-[40px] row-span-1 p-6">
+          <img className=" w-1/3 rounded-2xl " src="https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+              <BsSpotify className=" text-green-500 text-6xl "/>
+            <div>
+              <div>
+                <p className="pb-3 text-2xl text-green-500">Last played</p>
+                <p className="pb-3 text-3xl font-bold">21 guns</p>
+                <p className="pb-3 text-xl">Green day</p>
+              </div>
+            </div>
+          </div>     
+        
+          
+          
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      }
+    </div>
   )
 }
