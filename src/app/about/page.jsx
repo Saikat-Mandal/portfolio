@@ -1,7 +1,10 @@
-import React from 'react'
-import Home from '../page'
+"use client"
+import Home from "../page"
+import { useContext } from "react"
+
 
 function About() {
+
     return (
         <Home>
             about
