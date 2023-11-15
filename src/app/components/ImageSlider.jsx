@@ -30,8 +30,8 @@ function ImageSlider({ images }) {
     }, [imageIndex])
 
     return (
-        <div className='relative h-full'>
-            < img className=' h-full w-full block object-cover' src={images[imageIndex]} alt="" />
+        <div className='relative h-full overflow-hidden'>
+            < img className=' h-full w-full object-cover' src={images[imageIndex]} alt="" />
             <span onClick={showPrevImg} className=' block left-0  rounded-full bottom-0 p-2 hover:bg-slate-700 cursor-pointer absolute text-3xl '> <MdNavigateBefore className=' text-white' /></span>
             <span onClick={showNextImg} className=' block right-0 rounded-full  bottom-0 p-2 hover:bg-slate-700 cursor-pointer absolute text-3xl'> <MdNavigateNext className=' text-white' /></span>
 

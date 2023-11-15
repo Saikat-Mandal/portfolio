@@ -75,7 +75,10 @@ export default function Home({ children }) {
 
   // images slider 
 
-  const images = ["https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/18434049/pexels-photo-18434049/free-photo-of-a-motorcycle-is-parked-in-a-showroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
+  const link1 = "https://lh3.googleusercontent.com/pw/ADCreHdLE5bgw4s8d4n7L1vui8g6J7aaSG1sXIf-IChNNYnsL3FpPIVOMv-LrTQEDj62gaDNI2s6Tb9y1fhU0lNktP7oxnvPCsZZv0BHK7k4GjrWbbRE2clHwlHH853UoCGbpGuJBhbni_4Ls1wF8ypYD9hX=w1171-h879-s-no?authuser=0"
+  const link2 = "https://lh3.googleusercontent.com/pw/ADCreHeVJ1k-hkdiZUZVKMlaJpSAbUbxjZJJW6LrsNUUouIlGTY-59NTIJFGejTkXEZmEO1eq2dl39fKJ4NlTwivA2xtjGwbj-14hh6knWwkmsQbK8iHGNj2gMik42wpN9_4kfYcVsZ8dKgotclL3zuXQL2m=w1171-h879-s-no?authuser=0"
+  const link3 = "https://lh3.googleusercontent.com/pw/ADCreHc8Hcti7lKO_Xqbd2WMHqhm4ruKTPEUkQCOFzM7BBgP9RIEu94xCUwd4DcIy9Q-DMqxfRg-zYqfX0RMdW0Bv6wgqoP6d56TjLJKe2aY7G7YmDyfeIOe1fz9q1HkbWCXhI7kLgeNMmvkeXO53I33ASkx=w1171-h879-s-no?authuser=0"
+  const images = [link1, link2, link3]
 
   return (
 
