@@ -7,20 +7,24 @@ function BlogComponent(props) {
     const color = colors[Math.floor(Math.random() * colors.length)];
 
     return (
-        <div style={{ background: color }} className=" flex flex-1 mx-4 flex-col gap-x-6 cursor-pointer shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF]   overflow-hidden">
-            <div className=' h-40 w-40 '>
-                <img src={props.img} alt="" className='w-full h-full' />
-            </div>
-            <div>
-                <p className=' uppercase tracking-widest text-gray-500 font-extrabold'>{props.category}</p>
-                <h1 className=" font-extrabold text-2xl text-center py-2">{props.title}</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ex ipsam expedita neque beatae sunt illum quaerat, veniam numquam quia quisquam illo dolore nulla laboriosam perspiciatis necessitatibus! Laborum, cupiditate est!</p>
-                <div className='mt-6 flex justify-between'>
-                    <p className=" text-sm text-gray-500 font-bold"> {props.content}</p>
-                    <p className=" text-sm text-gray-500 font-bold"> {props.date}</p>
+        <div style={{ background: color }} className="flex items-center p-4 cursor-pointer gap-x-4 mb-2 rounded-md">
+            <div className="left">
+                {/* user  */}
+                <div className=' flex items-center gap-x-2'>
+                    <img src={props.img} alt="" className=' h-5 w-5 md:h-10 md:w-10 rounded-full' />
+                    <p>{props.name}</p>
+                    <p>{props.date}</p>
+                </div>
+                {/* body  */}
+                <div className=''>
+                    <h1 className=' text-2xl'>{props.title}</h1>
+                    <p className=' xl'>{props.content}</p>
+                    <p>{props.category}</p>
                 </div>
             </div>
-
+            <div className="right">
+                <img className='h-20 w-20' src={props.img} alt="" />
+            </div>
         </div>
     )
 }

@@ -23,7 +23,7 @@ function Signup() {
 
     return (
         <Home>
-            <div>
+            <div className=' p-4'>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder=' email' />
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="text" placeholder=' password' />
                 <button onClick={onSignup}>Submit</button>

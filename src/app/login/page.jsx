@@ -3,7 +3,11 @@ import Home from '../page'
 
 function page() {
     return (
-        <Home>page</Home>
+        <Home>
+            <div className=' p-4'>
+                Coming soon ....
+            </div>
+        </Home>
     )
 }
 

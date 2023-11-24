@@ -1,79 +1,85 @@
 "use client"
-
+import crypto from "crypto"
 import Navbar from "./components/Navbar"
 import { BsSpotify } from "react-icons/bs";
-import { createContext } from "react"
 import { AiFillHtml5 } from "react-icons/ai";
 import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoDocker, BiLogoKubernetes } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
 import { useContext, useEffect, useState } from "react";
 import ImageSlider from "./components/ImageSlider";
-
-
+import axios from "axios";
+import qs from "querystring"
+import SpotifyWebApi from "spotify-web-api-node"
 export default function Home({ children }) {
 
-  // const [spotifyAccessToken , setSpotifyAccessToken] = useState('')
-
-
-
-
-  // get the spotify acess token 
-  // useEffect(()=>{
-  //   const authString = process.env.CLIENT_ID +":"+ process.env.CLIENT_SECRET
-  //   const getSpotifyData =async () =>{
-  //     try {
-  //      const authParameters = {
-  //       method:'POST',
-  //       headers:{
-  //         'Content-Type' : 'application/x-www-form-urlencoded',
-  //       },
-  //       // body:'grant_type=client_credentials&client_id=0cc7c435e084493e98538acc21e26430&client_secret=0376259398d34d7a9dc8f0cc0eb7b614'
-  //       body: `grant_type=authorization_code&code=AUTHORIZATION_CODE&redirect_uri=http://localhost:3000&client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET`
-  //       // body:'grant_type=client_credentials&client_id=' + process.env.CLIENT_ID+ '&client_secret=' +process.env.CLIENT_SECRET
-  //      }
-
-  //      const resposnse=  await fetch("https://accounts.spotify.com/api/token" , authParameters)
-  //      const data = await resposnse.json()
-  //       setSpotifyAccessToken(data.access_token)
-  //     } catch (error) {
-  //       alert(error)
-  //     }
-  //   }
-
-  //   getSpotifyData()  
-
-
-  // },[])
-
-
-  // search in spotify api 
+  const [spotifyAccessToken, setSpotifyAccessToken] = useState('')
+  const generateRandomString = (length) => {
+    return crypto
+      .randomBytes(60)
+      .toString('hex')
+      .slice(0, length);
+  }
+  const clientId = "0cc7c435e084493e98538acc21e26430"
+  const clientSecret = "0376259398d34d7a9dc8f0cc0eb7b614"
+  const redirect_uri = 'http://localhost:3000/callback';
+  const stateKey = "spotifyKey"
+  const track_id = "07A0whlnYwfWfLQy4qh3Tq"
+  const auth_token = Buffer.from(`${clientId}:${clientSecret}`, 'utf-8').toString('base64');
+  const auth_token2 = Buffer.from(clientId + ':' + clientSecret).toString('base64')
+  const scope = 'user-read-private user-read-email';
+  // let spotifyApi = new SpotifyWebApi({
+  //   redirectUri: redirectUri,
+  //   clientId: clientId
+  // });
 
   // useEffect(() => {
-  //   if (spotifyAccessToken) {
-  //     getRecent();
+  //   const getAccessToken = async () => {
+  //     try {
+  //       const tokenUrl = "https://accounts.spotify.com/api/token"
+  //       const data = qs.stringify({ 'grant_type': 'client_credentials' });
+  //       const response = await axios.post(tokenUrl, data, {
+  //         headers: {
+  //           'Authorization': `Basic ${auth_token}`,
+  //           'Content-Type': 'application/x-www-form-urlencoded'
+  //         }
+  //       })
+
+  //       setSpotifyAccessToken(response.data.access_token)
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
   //   }
-  // }, [spotifyAccessToken]);
+  //   getAccessToken()
 
-  // const getRecent = async()=>{
-  //   try {
-  //    const headers = {
-  //      'Content-Type' : 'application/json',
-  //      'Authorization': `Bearer ${spotifyAccessToken}`
-  //    }
-  //    const response = await fetch("https://api.spotify.com/v1/me/player/recently-played" , {
-  //      method: 'GET',
-  //      headers: headers
-  //    })
+  // }, [])
 
-  //    const data  = await response.json()
-  //    console.log(data);
-  //   } catch (error) {
-  //    alert(error)
+  // get data from access token 
+  // useEffect(() => {
+  //   const getDataFromToken = async () => {
+  //     try {
+  //       const response = await axios.get(`https://api.spotify.com/v1/me/player/recently-played`, {
+  //         headers: {
+  //           Authorization: 'Bearer ' + spotifyAccessToken
+  //         }
+  //       })
+
+  //       console.log(response.data);
+  //       // console.log(spotifyAccessToken);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
   //   }
-  //  }
+  //   getDataFromToken()
+  // }, [spotifyAccessToken])
 
 
-  // images slider 
+  // get the spotify authorization 
+
+  const auth = async () => {
+
+  }
+
+
 
   const link1 = "https://lh3.googleusercontent.com/pw/ADCreHdLE5bgw4s8d4n7L1vui8g6J7aaSG1sXIf-IChNNYnsL3FpPIVOMv-LrTQEDj62gaDNI2s6Tb9y1fhU0lNktP7oxnvPCsZZv0BHK7k4GjrWbbRE2clHwlHH853UoCGbpGuJBhbni_4Ls1wF8ypYD9hX=w1171-h879-s-no?authuser=0"
   const link2 = "https://lh3.googleusercontent.com/pw/ADCreHeVJ1k-hkdiZUZVKMlaJpSAbUbxjZJJW6LrsNUUouIlGTY-59NTIJFGejTkXEZmEO1eq2dl39fKJ4NlTwivA2xtjGwbj-14hh6knWwkmsQbK8iHGNj2gMik42wpN9_4kfYcVsZ8dKgotclL3zuXQL2m=w1171-h879-s-no?authuser=0"
