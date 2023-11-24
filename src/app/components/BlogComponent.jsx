@@ -11,14 +11,14 @@ function BlogComponent(props) {
             <div className="left">
                 {/* user  */}
                 <div className=' flex items-center gap-x-2'>
-                    <img src={props.img} alt="" className=' h-5 w-5 md:h-10 md:w-10 rounded-full' />
+                    <img src={props.img} alt="" className=' h-5 w-5  md:h-10 md:w-10 rounded-full' />
                     <p>{props.name}</p>
                     <p>{props.date}</p>
                 </div>
                 {/* body  */}
                 <div className=''>
                     <h1 className=' text-2xl'>{props.title}</h1>
-                    <p className=' xl'>{props.content}</p>
+                    <p className=' xl'>{props.content.substring(0, 100)}...<Link href="/" className='underline text-cyan-500 hover:text-orange-400' >read more</Link></p>
                     <p>{props.category}</p>
                 </div>
             </div>

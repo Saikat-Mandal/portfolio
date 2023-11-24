@@ -1,18 +1,29 @@
 import Link from 'next/link'
 import React from 'react'
-
+import { BsSpotify } from "react-icons/bs";
 function ProjectComponent(props) {
+    const style = {
+        backgroundImage: `url(${props.image})`
+    }
     return (
-        <Link href={props.github} className="relative shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex flex-col col-span-1 rounded-[40px] row-span-1  overflow-hidden ">
-            <img src={props.img} alt="" />
-            <div>
-                <h1 className=" font-extrabold text-2xl text-center pt-2">{props.title}</h1>
-                <p className=" text-sm p-4"> {props.content}</p>
-            </div>
-            <span className=' absolute text-white text-3xl flex items-center' style={{ top: 100, left: 120 }}>{props.icon}{props.iconame}</span>
+        <div className="relative p-6 h-96 flex flex-col items-center justify-between bg-no-repeat bg-cover bg-center w-2/4 md:2/4 lg:w-80 " style={style} >
+            <p></p>
+            <div className=' absolute bg-black inset-0 bg-opacity-30 '> </div>
+            <p className='text-3xl text-center text-white z-20'>{props.title}</p>
 
-        </Link>
+
+            <div className="text-white text-3xl z-10">
+                {props.icon}
+            </div>
+
+        </div>
     )
 }
+
+
+ProjectComponent.defaultProps = {
+    title: 'Default Title',
+    icon: <BsSpotify />,
+};
 
 export default ProjectComponent
