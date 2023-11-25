@@ -18,6 +18,7 @@ function Navbar() {
                 <div className={`py-1 px-3 rounded-full ${pathname == "/register" ? "bg-[#FFFFFF]" : ""}`} > <Link href="/signup">Register</Link></div> */}
             </div>
 
+            <div className=' px-3 py-1 border-2 border-dashed border-orange-500 rounded-full'><p className='typewriter' >Website still under development</p></div>
             <button onClick={() => { setModalOpen(true) }} className=' px-3 py-1 border-4 hover:scale-105 border-orange-500 rounded-full'>Connect</button>
         </div>
     )
