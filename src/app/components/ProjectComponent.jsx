@@ -6,7 +6,7 @@ function ProjectComponent(props) {
         backgroundImage: `url(${props.image})`
     }
     return (
-        <div className="relative p-6 h-96 flex flex-col items-center justify-between bg-no-repeat bg-cover bg-center w-2/4 md:2/4 lg:w-80 " style={style} >
+        <div className="relative p-6 h-96 flex flex-col items-center justify-between bg-no-repeat bg-cover bg-center w-full md:2/4 lg:w-80 " style={style} >
             <p></p>
             <div className=' absolute bg-black inset-0 bg-opacity-30 '> </div>
             <p className='text-3xl text-center text-white z-20'>{props.title}</p>

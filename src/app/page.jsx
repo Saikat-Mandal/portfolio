@@ -100,7 +100,7 @@ export default function Home({ children }) {
               <h1 className=" pb-4 text-5xl text-center">Saikat Mandal</h1>
               <p className=" p-4 text-xl"> Self-taught Web - developer in Pune Hey! I'm Saikat, and my goal is to work at a company where I can deliver business value while levelling up my skills as a developer.</p>
               <div>
-                <button className=' px-3 py-1 ml-1 border-4 hover:scale-105 border-orange-500 rounded-full'>Lean more</button>
+                <button className=' px-3 py-1 ml-1 border-4 hover:scale-105 border-orange-500 rounded-full'>Learn more</button>
               </div>
             </div>
 
