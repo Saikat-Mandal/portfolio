@@ -1,6 +1,6 @@
 
 import { TiWeatherCloudy } from "react-icons/ti";
-import { AiFillLinkedin } from "react-icons/ai";
+import { BsSpotify } from "react-icons/bs";
 import { FaChrome } from "react-icons/fa";
 import { IoIosJournal } from "react-icons/io";
 import { FaVanShuttle } from "react-icons/fa6";
@@ -8,7 +8,7 @@ import { BsFillEmojiDizzyFill } from "react-icons/bs";
 export const data=[
     {
         title : "Spotify clone",
-        icon : <FaVanShuttle />,
+        icon : <BsSpotify />,
         image:"https://images.pexels.com/photos/7520751/pexels-photo-7520751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         link:"https://github.com/Saikat-Mandal/Spotify-clone"
     }, 

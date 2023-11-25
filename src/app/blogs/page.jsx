@@ -1,17 +1,27 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Home from '../page'
 import BlogComponent from '../components/BlogComponent'
 import { data } from '@/data/blogdata'
 function Blogs() {
 
-
+    // states 
     const [blogsArray, setBlogsArray] = useState(data)
-
+    const [blogId, setBlogId] = useState(null)
     const [quote, setQuote] = useState({
         content: "",
         author: ""
     })
+
+    const router = useRouter()
+    // get the id of clicked blog 
+    const getBlogId = (id) => {
+        setBlogId(id)
+        router.push(`/blogs/${id}`)
+    }
+
+
 
     useEffect(() => {
         async function randomQuote() {
@@ -26,6 +36,8 @@ function Blogs() {
     }, [])
 
 
+
+
     return (
         <Home>
             <div className="h-screen w-full overflow-hidden">
@@ -35,25 +47,21 @@ function Blogs() {
                     <div className=' w-full lg:w-3/6 lg:order-1 order-2 overflow-y-auto scrollbar-hide' >
 
                         <div className='flex flex-col justify-center items-center' >
-                            <BlogComponent
 
-                                img="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                                category="Tech"
-                                title="Ai as a new power"
-                                content="By faljsndfjlkasnlfn a as hfoaisuh foasif oasbf oasbf fsf oasklf hoasf as sak bf"
-                                date="Oct 19"
-                            />
                             {
                                 blogsArray.map((item, index) => {
                                     return <BlogComponent
-                                        key={index}
+                                        key={item.id}
+                                        id={item.id}
                                         category={item.category}
                                         title={item.title}
                                         content={item.content}
                                         date={item.date}
+                                        getBlogId={getBlogId}
                                     />
                                 })
                             }
+                            <div className=' h-20'></div>
 
                         </div>
 

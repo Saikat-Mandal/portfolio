@@ -7,7 +7,7 @@ function BlogComponent(props) {
     const color = colors[Math.floor(Math.random() * colors.length)];
 
     return (
-        <div style={{ background: color }} className="flex items-center p-4 cursor-pointer gap-x-4 mb-2 rounded-md">
+        <div onClick={() => props.getBlogId(props.id)} style={{ background: color }} className="flex items-center p-4 cursor-pointer gap-x-4 mb-2 rounded-md">
             <div className="left">
                 {/* user  */}
                 <div className=' flex items-center gap-x-2'>

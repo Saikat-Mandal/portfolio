@@ -26,4 +26,6 @@ ProjectComponent.defaultProps = {
     icon: <BsSpotify />,
 };
 
+
+
 export default ProjectComponent
