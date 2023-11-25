@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Home from '../page'
 import BlogComponent from '../components/BlogComponent'
 import { data } from '@/data/blogdata'
@@ -8,7 +8,23 @@ function Blogs() {
 
     const [blogsArray, setBlogsArray] = useState(data)
 
-    console.log(blogsArray);
+    const [quote, setQuote] = useState({
+        content: "",
+        author: ""
+    })
+
+    useEffect(() => {
+        async function randomQuote() {
+            const response = await fetch('https://api.quotable.io/random')
+            const data = await response.json()
+            setQuote({
+                content: data.content,
+                author: data.author
+            });
+        }
+        randomQuote()
+    }, [])
+
 
     return (
         <Home>
@@ -20,6 +36,7 @@ function Blogs() {
 
                         <div className='flex flex-col justify-center items-center' >
                             <BlogComponent
+
                                 img="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                                 category="Tech"
                                 title="Ai as a new power"
@@ -29,6 +46,7 @@ function Blogs() {
                             {
                                 blogsArray.map((item, index) => {
                                     return <BlogComponent
+                                        key={index}
                                         category={item.category}
                                         title={item.title}
                                         content={item.content}
@@ -45,9 +63,8 @@ function Blogs() {
                     {/* quote  */}
                     <div className="  flex w-full lg:w-2/6 lg:px-5 lg:order-2 order-1 mb-6 ">
                         <div className="flex flex-col bg-black justify-between text-white p-5 h-fit rounded-2xl">
-                            <h1 className=' text-3xl py-5'>Merge thoughts,<br /> not just code</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda temporibus recusandae eius, voluptatem totam esse eum nihil e
-                                x autem sapiente minus hic cupiditate beatae molestiae error modi id dolorum voluptate.</p>
+                            <h1 className=' text-3xl py-5'>{quote.content}</h1>
+                            <p>{quote.author}</p>
                             <div className='my-2 px-3 py-1 cursor-pointer border border-white rounded-full text-center'>See more quotes</div>
                         </div>
                     </div>
