@@ -5,6 +5,7 @@ export const data = [
         title :"Ai as new power",
         content:"By faljsndfjlkasnlfn a as hfoaisuh foasif oasbf oasbf fsf oasklf hoasf as sak bf",
         category:"Tech",
+        author:"Saikat Mandal",
         imgUrl:"",
         profileimageUrl:""
     },   
@@ -14,6 +15,7 @@ export const data = [
         title :"Ai as new power",
         content:"By faljsndfjlkasnlfn a as hfoaisuh foasif oasbf oasbf fsf oasklf hoasf as sak bf",
         category:"Tech",
+        author:"Saikat Mandal",
         imgUrl:"",
         profileimageUrl:""
     },   
@@ -23,6 +25,7 @@ export const data = [
         title :"Ai as new power",
         content:"By faljsndfjlkasnlfn a as hfoaisuh foasif oasbf oasbf fsf oasklf hoasf as sak bf",
         category:"Tech",
+        author:"Saikat Mandal",
         imgUrl:"",
         profileimageUrl:""
     },  
@@ -32,6 +35,7 @@ export const data = [
         title :"Ai as new power",
         content:"By faljsndfjlkasnlfn a as hfoaisuh foasif oasbf oasbf fsf oasklf hoasf as sak bf",
         category:"Tech",
+        author:"Saikat Mandal",
         imgUrl:"",
         profileimageUrl:""
     },  
@@ -41,6 +45,7 @@ export const data = [
         title :"Ai as new power",
         content:"By faljsndfjlkasnlfn a as hfoaisuh foasif oasbf oasbf fsf oasklf hoasf as sak bf",
         category:"Tech",
+        author:"Saikat Mandal",
         imgUrl:"",
         profileimageUrl:""
     },
