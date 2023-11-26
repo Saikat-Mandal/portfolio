@@ -36,7 +36,9 @@ function Blogs() {
     }, [])
 
 
-
+    if (quote.content == "") {
+        return <Home><h1>Loading...</h1></Home>
+    }
 
     return (
         <Home>
@@ -57,6 +59,8 @@ function Blogs() {
                                         title={item.title}
                                         content={item.content}
                                         date={item.date}
+                                        imgUrl={item.imgUrl}
+                                        profileimageUrl={item.profileimageUrl}
                                         getBlogId={getBlogId}
                                     />
                                 })

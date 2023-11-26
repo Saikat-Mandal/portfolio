@@ -21,18 +21,18 @@ function page({ params }) {
         <Home>
             <div className="w-full h-full">
 
-                <div className=' flex flex-col items-center pb-10'>
+                <div className=' flex flex-col items-center p-10'>
 
-                    <h1 className=' text-5xl' >{blog.title}</h1>
+                    <h1 className=' text-5xl text-center' >{blog.title}</h1>
                     <div className=' flex items-center w-1/6 justify-between py-20' >
-                        <img src="" alt="" className=' h-10 w-10 rounded-full' />
+                        <img src={blog.profileimageUrl} alt="" className=' h-10 w-10 rounded-full' />
                         .
                         <p>{blog.author}</p>
                         .
                         <p className="">{blog.date}</p>
                     </div>
 
-                    <p>{blog.content}</p>
+                    <p className=' px-10'>{blog.content}</p>
                 </div>
 
             </div>

@@ -11,19 +11,19 @@ function BlogComponent(props) {
             <div className="left">
                 {/* user  */}
                 <div className=' flex items-center gap-x-2'>
-                    <img src={props.img} alt="" className=' h-5 w-5  md:h-10 md:w-10 rounded-full' />
+                    <img src={props.profileimageUrl} alt="" className=' h-5 w-5  md:h-10 md:w-10 rounded-full' />
                     <p>{props.name}</p>
                     <p>{props.date}</p>
                 </div>
                 {/* body  */}
                 <div className=''>
                     <h1 className=' text-2xl'>{props.title}</h1>
-                    <p className=' xl'>{props.content.substring(0, 100)}...<Link href="/" className='underline text-cyan-500 hover:text-orange-400' >read more</Link></p>
-                    <p>{props.category}</p>
+                    <p className=' xl'>{props.content.substring(0, 100)}...<Link href={`/blogs/${props.id}`} className='underline text-cyan-500 hover:text-orange-400' >read more</Link></p>
+                    <p className='py-4'>{props.category}</p>
                 </div>
             </div>
-            <div className="right">
-                <img className='h-20 w-20' src={props.img} alt="" />
+            <div className="right h-20 w-40">
+                <img className='h-full w-full object-contain ' src={props.imgUrl} alt="" />
             </div>
         </div>
     )
