@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Switch from "react-switch";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ContactModal from './modals/ContactModal';
@@ -8,6 +8,12 @@ function Navbar() {
     const pathname = usePathname()
 
     const [showNavbar, setShowNavbar] = useState(true)
+
+    useEffect(() => {
+        if (window.innerWidth <= 832) {
+            setShowNavbar(false)
+        }
+    }, [window.innerWidth])
 
 
     return (
@@ -26,7 +32,7 @@ function Navbar() {
                 ) : (<></>)
             }
 
-            < div className=' px-3 py-1 border-2 border-dashed border-orange-500 rounded-full' > <p className='typewriter' >Website still under development</p>
+            < div className=' md:block hidden px-3 py-1 border-2 border-dashed border-orange-500 rounded-full' > <p className='typewriter' >Website still under development</p>
             </div >
             <button onClick={() => { setModalOpen(true) }} className=' px-3 py-1 border-4 hover:scale-105 border-orange-500 rounded-full '>Connect</button>
             <span onClick={() => setShowNavbar(prev => !prev)} className=' lg:hidden block cursor-pointer text-2xl'> <GiHamburgerMenu /></span>

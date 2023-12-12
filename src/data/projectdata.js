@@ -1,7 +1,7 @@
 
 import { TiWeatherCloudy } from "react-icons/ti";
 import { BsSpotify } from "react-icons/bs";
-import { FaChrome } from "react-icons/fa";
+import { FaChrome , FaDropbox  } from "react-icons/fa";
 import { IoIosJournal } from "react-icons/io";
 import { FaVanShuttle } from "react-icons/fa6";
 import { BsFillEmojiDizzyFill } from "react-icons/bs";
@@ -17,7 +17,13 @@ export const data=[
         icon : <FaVanShuttle />,
         image:"https://images.pexels.com/photos/19116880/pexels-photo-19116880/free-photo-of-ford-transit-car-on-the-highway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         link:"https://github.com/Saikat-Mandal/van-life"
-    },    
+    },   
+    {
+        title : "Dropbox clone",
+        icon : <FaDropbox  />,
+        image:"https://plus.unsplash.com/premium_photo-1688822011168-f18f092f5bd6?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        link:"https://dropbox-2-0.vercel.app/"
+    }, 
     {
         title : "Blogging platform",
         icon : <IoIosJournal />,
@@ -41,5 +47,6 @@ export const data=[
         icon : <TiWeatherCloudy />,
         image:"https://images.unsplash.com/photo-1514632595-4944383f2737?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         link:"https://github.com/Saikat-Mandal/React-weather-app"
-    },
+    },   
+
 ]

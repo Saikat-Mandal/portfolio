@@ -7,7 +7,7 @@ import { TiWeatherCloudy } from "react-icons/ti";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaChrome } from "react-icons/fa";
 import { IoIosJournal } from "react-icons/io";
-import { FaVanShuttle } from "react-icons/fa6";
+import { FaVanShuttle, FaDropbox } from "react-icons/fa6";
 import { BsFillEmojiDizzyFill } from "react-icons/bs";
 import { data } from '@/data/projectdata';
 

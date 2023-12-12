@@ -92,11 +92,11 @@ export default function Home({ children }) {
       <Navbar />
       {children ? <>{children}</> :
         <div className=" flex justify-center min-h-screen w-full">
-          <div className=" w-4/5 h-full grid-rows-4 p-10 grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 grid-flow-rows">
+          <div className="w-full md:w-4/5 h-full grid-rows-4 p-10 grid  grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-4 grid-flow-rows">
 
 
             {/* intro  */}
-            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex flex-col col-span-2 rounded-[40px] row-span-1 p-6 ">
+            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex flex-col col-span-3 md:col-span-2 rounded-[40px] row-span-1 p-6 ">
               <h1 className=" pb-4 text-5xl text-center">Saikat Mandal</h1>
               <p className=" p-4 text-xl"> Self-taught Web - developer in Pune Hey! I'm Saikat, and my goal is to work at a company where I can deliver business value while levelling up my skills as a developer.</p>
               <div>
@@ -105,12 +105,12 @@ export default function Home({ children }) {
             </div>
 
             {/* images  */}
-            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-1 rounded-[40px] overflow-hidden row-span-1 ">
+            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3 md:col-span-1 rounded-[40px] overflow-hidden row-span-1 ">
               <ImageSlider images={images} />
             </div>
 
             {/* my stack     */}
-            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-1 rounded-[40px] row-span-2 p-6">
+            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3  md:col-span-1 rounded-[40px] row-span-1 md:row-span-2 p-6">
               <p className="pb-8 text-3xl font-bold">My stack</p>
               <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
                 <div className="text-4xl">
@@ -155,7 +155,7 @@ export default function Home({ children }) {
             </div>
 
             {/* current    */}
-            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-1 rounded-[40px] row-span-2 p-6">
+            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3 md:col-span-1 rounded-[40px] row-span-2 p-6">
               <p className="pb-8 text-3xl font-bold">Currently learning</p>
               <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
                 <div className="text-4xl">
@@ -171,7 +171,7 @@ export default function Home({ children }) {
 
             </div>
             {/* maps  */}
-            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-2 rounded-[40px] row-span-1 overflow-hidden">
+            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3 md:col-span-2 rounded-[40px] row-span-1 overflow-hidden">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15128.631750359678!2d73.90718619316455!3d18.566917011566265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c146e61484b5%3A0xb6482cf7a8b4b3b0!2sViman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1699380730364!5m2!1sen!2sin"
                 width="600"
                 height="300"
