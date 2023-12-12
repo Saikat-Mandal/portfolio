@@ -13,7 +13,7 @@ function Navbar() {
         if (window.innerWidth <= 832) {
             setShowNavbar(false)
         }
-    }, [window.innerWidth])
+    }, [])
 
 
     return (
