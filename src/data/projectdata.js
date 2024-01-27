@@ -5,6 +5,7 @@ import { FaChrome , FaDropbox  } from "react-icons/fa";
 import { IoIosJournal } from "react-icons/io";
 import { FaVanShuttle } from "react-icons/fa6";
 import { BsFillEmojiDizzyFill } from "react-icons/bs";
+import { FaArrowsToDot } from "react-icons/fa6";
 export const data=[
     {
         title : "Spotify clone",
@@ -16,7 +17,7 @@ export const data=[
         title : "Van life",
         icon : <FaVanShuttle />,
         image:"https://images.pexels.com/photos/19116880/pexels-photo-19116880/free-photo-of-ford-transit-car-on-the-highway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        link:"https://github.com/Saikat-Mandal/van-life"
+        link:"https://van-life-five.vercel.app/"
     },   
     {
         title : "Dropbox clone",
@@ -24,6 +25,12 @@ export const data=[
         image:"https://plus.unsplash.com/premium_photo-1688822011168-f18f092f5bd6?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         link:"https://dropbox-2-0.vercel.app/"
     }, 
+    {
+        title : "Stackoverflow clone",
+        icon : <FaArrowsToDot />,
+        image:"https://images.unsplash.com/photo-1544535830-9df3f56fff6a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHF1ZXN0aW9ufGVufDB8fDB8fHww",
+        link:"https://github.com/Saikat-Mandal/Snipcode.io"
+    },  
     {
         title : "Blogging platform",
         icon : <IoIosJournal />,
@@ -34,7 +41,7 @@ export const data=[
         title : "Meme generator",
         icon : <BsFillEmojiDizzyFill />,
         image:"https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1lbWVzfGVufDB8fDB8fHww",
-        link:"https://github.com/Saikat-Mandal/meme-generator-scrimba"
+        link:"https://meme-generator-brown-six.vercel.app/"
     },    
     {
         title : "Chrome extension",

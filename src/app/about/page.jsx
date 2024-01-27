@@ -14,11 +14,15 @@ function About() {
                         <h1 className=" text-6xl md:text-8xl  lg:text-9xl  text-right">of</h1>
                         <h1 className=" text-6xl md:text-8xl  lg:text-9xl  text-right">me</h1>
                     </div>
-                    <p className=" py-14 ">Hi there, I am Saikat! A full stack developer form Pune India. My expertise are with the infamous MERN stack, I am also exploring to diversify
-                        my skills in other fileds also such as cloud (AWS) , devops (DOCKER AND KUBERNETES) , AI ML and react native.<br /> <br />As a full stack developer and student of engineering, I have a diverse range of skills and experiences that contribute to my unique personality. I am highly adaptable, able to work in both individual and team settings, and am always eager to learn and take on new challenges.<br /><br />
-                        In my work as a full stack developer, I have experience in a variety of programming languages and frameworks, including HTML, CSS, JavaScript, React, and Node.js. I am also experienced in database management and server-side scripting, allowing me to create fully-functional web applications from start to finish.<br /><br />
-                        As a student of engineering, I have developed strong problem-solving skills and a solid understanding of technical concepts. I am highly detail-oriented and able to think critically and logically, which allows me to tackle complex challenges with ease.<br /><br />
-                        Overall, my unique blend of technical and interpersonal skills allows me to work well in a variety of settings and contribute positively to any team or project.As </p>
+                    <p className=" py-14 text-base md:text-2xl">👋<strong> Hello, I'm Saikat Mandal!</strong> <br /><br />
+
+                        🎓 Currently pursuing my education at VIT Bhopal University (2020-2024), I am passionate about leveraging technology to solve real-world problems. My academic journey is focused on honing my skills in the MERN (MongoDB, Express.js, React, Node.js) stack, AWS Cloud services, Docker and GraphQL.<br /> <br />
+
+                        💼 During my academic journey, I've had the privilege of gaining practical experience through an enriching internship at qviq.io, where I contributed as a Full Stack Developer. This experience allowed me to delve into the intricacies of web development, enhancing my proficiency in creating scalable and efficient solutions.<br /> <br />
+
+                        🚀 I thrive in dynamic environments, constantly seeking opportunities to learn and apply innovative technologies. My goal is to make a positive impact in the world of technology by combining my academic knowledge with practical experiences gained through internships.<br /><br />
+
+                        🔗 Let's connect! I'm always open to networking, collaborating on exciting projects, and exploring new opportunities in the tech industry.👋  </p>
                     <div className=" h-40 w-40 "></div>
                 </div>
             </div>
