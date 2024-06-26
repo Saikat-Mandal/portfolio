@@ -3,10 +3,13 @@ import crypto from "crypto"
 import Navbar from "./components/Navbar"
 import { BsSpotify } from "react-icons/bs";
 import { AiFillHtml5 } from "react-icons/ai";
+import { FaInstagram, FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoDocker, BiLogoKubernetes } from "react-icons/bi";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiDjango } from "react-icons/si";
 import { useContext, useEffect, useState } from "react";
+import { FaArrowUp, FaAws } from "react-icons/fa";
 import ImageSlider from "./components/ImageSlider";
+import { TbBrandReactNative } from "react-icons/tb";
 import axios from "axios";
 import qs from "querystring"
 import SpotifyWebApi from "spotify-web-api-node"
@@ -111,64 +114,86 @@ export default function Home({ children }) {
             </div>
 
             {/* my stack     */}
-            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3  md:col-span-1 rounded-[40px] row-span-1 md:row-span-2 p-6">
+            <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-center flex-col col-span-3 md:col-span-1 rounded-[40px] row-span-1 md:row-span-2 pt-6 px-6">
               <p className="pb-8 text-3xl font-bold">My stack</p>
-              <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
-                <div className="text-4xl">
-                  <AiFillHtml5 className=" text-orange-500" />
-                  <BiLogoCss3 className=" text-blue-500" />
+              <div className="overflow-auto h-[30rem] "> {/* Add a fixed height here */}
+                <div className="flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                  <div className="text-4xl">
+                    <AiFillHtml5 className="text-orange-500" />
+                    <BiLogoCss3 className="text-blue-500" />
+                  </div>
+                  <div>
+                    <p>Build Responsive Websites with HTML and CSS</p>
+                  </div>
                 </div>
-                <div>
-                  <p>Build Responsive Websites with HTML and CSS</p>
+                <div className="flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                  <div className="text-4xl">
+                    <BiLogoJavascript className="text-yellow-200" />
+                  </div>
+                  <div>
+                    <p>The Complete JavaScript Course</p>
+                  </div>
                 </div>
-              </div>
-              <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
-                <div className="text-4xl">
-                  <BiLogoJavascript className=" text-yellow-200" />
+                <div className="flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                  <div className="text-4xl">
+                    <BiLogoReact className="text-cyan-400" />
+                  </div>
+                  <div>
+                    <p>React: The Complete Guide</p>
+                  </div>
+                </div>
+                <div className="flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                  <div className="text-4xl">
+                    <BiLogoNodejs className="text-green-400" />
+                    <SiExpress className="" />
+                    <BiLogoMongodb className="text-green-700" />
+                  </div>
+                  <div>
+                    <p>Node.js, Express and MongoDB Bootcamp</p>
+                  </div>
+                </div>
+                <div className="flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                  <div className="text-4xl">
+                    <BiLogoDocker className="text-[#2A99EE]" />
+                  </div>
+                  <div>
+                    <p>Docker: Programming with mosh</p>
+                  </div>
+                </div>
 
-                </div>
-                <div>
-                  <p>The Complete JavaScript Course</p>
-                </div>
-              </div>
-
-              <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
-                <div className="text-4xl">
-                  <BiLogoReact className=" text-cyan-400" />
-
-                </div>
-                <div>
-                  <p>React: The Complete Guide</p>
-                </div>
-              </div>
-
-              <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
-                <div className="text-4xl">
-                  <BiLogoNodejs className=" text-green-400" />
-                  <SiExpress className="" />
-                  <BiLogoMongodb className=" text-green-700" />
-
-                </div>
-                <div>
-                  <p>Node.js, Express and MongoDB Bootcamp</p>
+                <div className="flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                  <div className="text-4xl">
+                    <FaAws className=" text-yellow-400" />
+                  </div>
+                  <div>
+                    <p>Cloud: AWS training academy</p>
+                  </div>
                 </div>
               </div>
             </div>
 
+
             {/* current    */}
             <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3 md:col-span-1 rounded-[40px] row-span-2 p-6">
               <p className="pb-8 text-3xl font-bold">Currently learning</p>
+
               <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
                 <div className="text-4xl">
-                  <BiLogoDocker className=" text-cyan-500" />
-                  <BiLogoKubernetes className=" text-blue-500" />
+                  <SiDjango className=" text-green-700" />
                 </div>
                 <div>
-                  <p>Devops</p>
+                  <p>Django </p>
                 </div>
               </div>
 
-
+              <div className=" flex gap-x-3 items-center mb-6 pb-3 border-b border-b-gray-400">
+                <div className="text-4xl">
+                  <TbBrandReactNative className=" text-cyan-400" />
+                </div>
+                <div>
+                  <p>React native </p>
+                </div>
+              </div>
 
             </div>
             {/* maps  */}
@@ -179,6 +204,7 @@ export default function Home({ children }) {
                 style={{ border: "0" }}
               ></iframe>
             </div>
+            {/* spotify  */}
             <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-center justify-between col-span-3 rounded-[40px] row-span-1 p-6">
               <img className=" w-1/3 rounded-2xl " src="https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
               <BsSpotify className=" text-green-500 text-6xl " />
@@ -190,8 +216,31 @@ export default function Home({ children }) {
                 </div>
               </div>
             </div>
+            {/* socials  */}
 
+            {/* github  */}
+            <div className="cursor-pointer shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#161414] text-white flex items-center justify-center text-8xl col-span-3 md:col-span-1 rounded-[40px] overflow-hidden row-span-1 relative">
+              <FaGithub />
+              <Link href="https://github.com/Saikat-Mandal" className=" absolute text-2xl  bottom-5 p-3 rounded-full bg-[#0E0D0D] right-8 rotate-icon"><FaArrowUp /></Link>
+            </div>
 
+            {/* Instagram  */}
+            <div className="cursor-pointer shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[] text-white bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 flex items-center justify-center text-8xl col-span-3 md:col-span-1 rounded-[40px] overflow-hidden row-span-1 relative">
+              <FaInstagram />
+              <Link href="https://www.instagram.com/_saiiikat_/" className=" absolute text-2xl  bottom-5 p-3 rounded-full bg-[#9B2E51] right-8 rotate-icon"><FaArrowUp /></Link>
+            </div>
+
+            {/* LinkedIn  */}
+            <div className="cursor-pointer shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#5285CE] text-white flex items-center justify-center text-8xl col-span-3 md:col-span-1 rounded-[40px] overflow-hidden row-span-1 relative">
+              <FaLinkedin />
+              <Link href="https://www.linkedin.com/in/saikat-mandal-310ab61b0/" className=" absolute text-2xl  bottom-5 p-3 rounded-full bg-[#395D90] right-8 rotate-icon"><FaArrowUp /></Link>
+            </div>
+
+            {/* Twitter  */}
+            <div className="cursor-pointer shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#000000] text-white flex items-center justify-center text-8xl col-span-3 md:col-span-1 rounded-[40px] overflow-hidden row-span-1 relative">
+              <FaXTwitter />
+              <Link href="https://x.com/saikat_07_" className=" absolute text-2xl  bottom-5 p-3 rounded-full bg-[#0E0D0D] right-8 rotate-icon"><FaArrowUp /></Link>
+            </div>
 
           </div>
         </div>

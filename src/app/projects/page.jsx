@@ -20,7 +20,7 @@ function Projects() {
 
     return (
         <Home>
-            <div className=" h-full flex  px-8">
+            <div className=" h-full flex  px-8 pb-8">
 
 
                 <div className='container mx-auto' >
