@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import "./blog.css"
 import { useRouter } from 'next/navigation'
 import Home from '../page'
 import BlogComponent from '../components/BlogComponent'
@@ -23,22 +24,42 @@ function Blogs() {
 
 
 
-    useEffect(() => {
-        async function randomQuote() {
-            const response = await fetch('https://api.quotable.io/random')
-            const data = await response.json()
-            setQuote({
-                content: data.content,
-                author: data.author
-            });
-        }
-        randomQuote()
-    }, [])
+    // useEffect(() => {
+    //     async function randomQuote() {
+    //         const response = await fetch('https://api.quotable.io/random')
+    //         const data = await response.json()
+    //         setQuote({
+    //             content: data.content,
+    //             author: data.author
+    //         });
+    //     }
+    //     randomQuote()
+    // }, [])
 
 
-    if (quote.content == "") {
-        return <Home><h1>Loading...</h1></Home>
-    }
+    // if (quote.content == "") {
+    //     return (
+    //         <Home>
+
+    //             <div className='flex items-center justify-center  w-full h-96'>
+    //                 <div className="spinner">
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                     <div></div>
+    //                 </div>
+    //             </div>
+
+
+    //         </Home>
+    //     )
+    // }
 
     return (
         <Home>
@@ -73,13 +94,13 @@ function Blogs() {
                     </div>
 
                     {/* quote  */}
-                    <div className="  flex w-full lg:w-2/6 lg:px-5 lg:order-2 order-1 mb-6 ">
+                    {/* <div className="  flex w-full lg:w-2/6 lg:px-5 lg:order-2 order-1 mb-6 ">
                         <div className="flex flex-col bg-black justify-between text-white p-5 h-fit rounded-2xl">
                             <h1 className=' text-3xl py-5'>{quote.content}</h1>
                             <p>{quote.author}</p>
                             <div className='my-2 px-3 py-1 cursor-pointer border border-white rounded-full text-center'>See more quotes</div>
                         </div>
-                    </div>
+                    </div> */}
 
 
 
