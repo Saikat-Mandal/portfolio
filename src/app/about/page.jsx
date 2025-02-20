@@ -7,7 +7,7 @@ function About() {
     return (
         <Home>
             <div className="flex justify-center md:justify-end h-screen overflow-hidden ">
-                <div className="mt-32 flex justify-center md:justify-end h-screen overflow-hidden">
+                <div className="mt-32 flex justify-center md:justify-end h-screen overflow-hidden   ">
                     <div className="h-full p-10  lg:w-2/3 overflow-y-auto lg:mr-60 scrollbar-hide">
                         <div className=" md:flex-col flex gap-x-4">
                             <h1 className=" text-6xl md:text-8xl  lg:text-9xl  text-right">More</h1>
@@ -33,7 +33,8 @@ function About() {
 
                 </div>
             </div>
-
+            {/* Underline effect on hover */}
+            {/* <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gray-600 transition-all duration-500 ease-in-out group-hover:w-full"></span> */}
         </Home>
     )
 }

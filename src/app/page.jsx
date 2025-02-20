@@ -13,6 +13,7 @@ import { TbBrandReactNative } from "react-icons/tb";
 import Link from "next/link";
 import Stack from "./components/Stack";
 import SocialTab from "./components/SocialTab";
+import MapComponent from "./components/MapComponent";
 export default function Home({ children }) {
 
   const [spotifyAccessToken, setSpotifyAccessToken] = useState('')
@@ -172,12 +173,17 @@ export default function Home({ children }) {
 
               {/* maps  */}
               <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-cente flex-col col-span-3 md:col-span-2 rounded-[40px] row-span-1 overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15128.631750359678!2d73.90718619316455!3d18.566917011566265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c146e61484b5%3A0xb6482cf7a8b4b3b0!2sViman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1699380730364!5m2!1sen!2sin"
+                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15128.631750359678!2d73.90718619316455!3d18.566917011566265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c146e61484b5%3A0xb6482cf7a8b4b3b0!2sViman%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1699380730364!5m2!1sen!2sin"
                   width="600"
                   height="300"
                   style={{ border: "0" }}
-                ></iframe>
+                ></iframe> */}
+
+                <MapComponent />
               </div>
+
+
+
               {/* spotify  */}
               <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] bg-[#FFFFFF] flex items-center justify-between col-span-3 rounded-[40px] row-span-1 p-6">
                 <img className=" w-1/3 rounded-2xl " src="https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
